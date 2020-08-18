@@ -1,19 +1,29 @@
+/* eslint-disable import/extensions */
 import {
   render as renderBoard,
   tick,
   showMe,
   PLAY_X,
   PLAY_O,
-// eslint-disable-next-line import/extensions
 } from './board.js';
+import { playerOne, playerTwo } from './players.js';
+import { checkPlayersNames, winningText, winningTextElt } from './game_play.js';
+
 
 const restartButton = document.getElementById('restartButton');
+const startPage = document.getElementById('startPage');
+const startButton = document.getElementById('startBtn');
+const exitButton = document.getElementById('exitBtn');
+const inputs = document.querySelectorAll('input');
 
 // eslint-disable-next-line no-use-before-define
 startGame();
 
 function startGame() {
-  renderBoard();
+  if (checkPlayersNames()) {
+    startPage.classList.add('d-none');
+    renderBoard();
+  }
 }
 
 function restart() {
@@ -25,4 +35,31 @@ function restart() {
   });
   startGame();
 }
+
+function exit() {
+  winningTextElt.classList.remove('show');
+  tick.forEach(cell => {
+    cell.classList.remove(PLAY_X);
+    cell.classList.remove(PLAY_O);
+    winningText.innerHTML = '';
+    cell.removeEventListener('click', showMe);
+  });
+  playerOne.classList.remove('error');
+  playerTwo.classList.remove('error');
+  playerOne.value = '';
+  playerTwo.value = '';
+  startPage.classList.toggle('d-none');
+}
+
+(function inputRemoveErrorClass() {
+  inputs.forEach(input => {
+    // eslint-disable-next-line func-names
+    input.onkeyup = function () {
+      input.classList.remove('error');
+    };
+  });
+}());
+
 restartButton.addEventListener('click', restart);
+startButton.addEventListener('click', startGame);
+exitButton.addEventListener('click', exit);

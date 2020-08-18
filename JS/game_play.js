@@ -1,6 +1,8 @@
+/* eslint-disable no-else-return */
 /* eslint-disable import/extensions */
 // eslint-disable-next-line import/no-cycle
 import { tick, PLAY_X, PLAY_O } from './board.js';
+import { setPlayerNames as playersNames, playerOne, playerTwo } from './players.js';
 
 // eslint-disable-next-line import/no-mutable-exports
 export let playerTurn = false;
@@ -31,20 +33,37 @@ function playerWon(currentClass) {
   });
 }
 
-function endGame(draw) {
-  if (draw) {
-    winningText.innerHTML = 'It is a Draw!!';
-  } else {
-    winningText.innerHTML = `${playerTurn ? 'O' : 'X'} Wins!!`;
-  }
-  winningTextElt.classList.add('show');
-}
-
 function isDraw() {
   // eslint-disable-next-line arrow-body-style
   return [...tick].every(cell => {
     return cell.classList.contains(PLAY_X) || cell.classList.contains(PLAY_O);
   });
+}
+
+export function checkPlayersNames() {
+  const names = playersNames();
+  if ((names[0] === '') && (names[1] === '')) {
+    playerOne.classList.add('error');
+    playerTwo.classList.add('error');
+    return false;
+  } else if (names[0] === '') {
+    playerOne.classList.add('error');
+    return false;
+  } else if (names[1] === '') {
+    playerTwo.classList.add('error');
+    return false;
+  }
+  return true;
+}
+
+function endGame(draw) {
+  const names = playersNames();
+  if (draw) {
+    winningText.innerHTML = 'It is a Draw!!';
+  } else {
+    winningText.innerHTML = `${playerTurn ? names[1] : names[0]} Wins!!`;
+  }
+  winningTextElt.classList.add('show');
 }
 
 export function checkWinner(currentClass) {
