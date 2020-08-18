@@ -1,0 +1,58 @@
+.game-board {
+  max-width: 310px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  align-items: center;
+  margin: 60px auto;
+}
+
+.board-cell {
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+}
+
+.text-center {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 40px;
+}
+
+.board-cell1, 
+.board-cell4, 
+.board-cell7 {
+  border-left: none;
+}
+
+.board-cell3, 
+.board-cell6, 
+.board-cell9 {
+  border-right: none;
+} 
+
+.board-cell1, 
+.board-cell2, 
+.board-cell3 {
+  border-top: none;
+}
+
+.board-cell7, 
+.board-cell8, 
+.board-cell9 {
+  border-bottom: none;
+}
+
+.playX {
+  background-image: url('images/AX.png');
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.playO {
+  background-image: url('images/O.png');
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
