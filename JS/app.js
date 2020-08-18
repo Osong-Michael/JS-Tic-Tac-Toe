@@ -14,7 +14,6 @@ const restartButton = document.getElementById('restartButton');
 const startPage = document.getElementById('startPage');
 const startButton = document.getElementById('startBtn');
 const exitButton = document.getElementById('exitBtn');
-const inputs = document.querySelectorAll('input');
 
 // eslint-disable-next-line no-use-before-define
 startGame();
@@ -44,21 +43,10 @@ function exit() {
     winningText.innerHTML = '';
     cell.removeEventListener('click', showMe);
   });
-  playerOne.classList.remove('error');
-  playerTwo.classList.remove('error');
   playerOne.value = '';
   playerTwo.value = '';
   startPage.classList.toggle('d-none');
 }
-
-(function inputRemoveErrorClass() {
-  inputs.forEach(input => {
-    // eslint-disable-next-line func-names
-    input.onkeyup = function () {
-      input.classList.remove('error');
-    };
-  });
-}());
 
 restartButton.addEventListener('click', restart);
 startButton.addEventListener('click', startGame);

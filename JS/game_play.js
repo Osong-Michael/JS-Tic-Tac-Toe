@@ -43,14 +43,13 @@ function isDraw() {
 export function checkPlayersNames() {
   const names = playersNames();
   if ((names[0] === '') && (names[1] === '')) {
-    playerOne.classList.add('error');
-    playerTwo.classList.add('error');
+    playerOne.value = 'Guest One';
+    playerTwo.value = 'Guest Two';
     return false;
   } else if (names[0] === '') {
-    playerOne.classList.add('error');
-    return false;
+    playerOne.value = 'Guest One';
   } else if (names[1] === '') {
-    playerTwo.classList.add('error');
+    playerTwo.value = 'Guest Two';
     return false;
   }
   return true;

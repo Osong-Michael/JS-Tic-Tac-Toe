@@ -17,28 +17,38 @@
   text-align: center;
   margin-top: 50px;
   font-size: 40px;
+  color: red;
 }
 
-.board-cell1, 
-.board-cell4, 
+.text-center span {
+  color: rgb(52, 52, 180);
+}
+
+.input-text {
+  font-size: 20px;
+  color: rgb(46, 220, 243);
+}
+
+.board-cell1,
+.board-cell4,
 .board-cell7 {
   border-left: none;
 }
 
-.board-cell3, 
-.board-cell6, 
+.board-cell3,
+.board-cell6,
 .board-cell9 {
   border-right: none;
-} 
+}
 
-.board-cell1, 
-.board-cell2, 
+.board-cell1,
+.board-cell2,
 .board-cell3 {
   border-top: none;
 }
 
-.board-cell7, 
-.board-cell8, 
+.board-cell7,
+.board-cell8,
 .board-cell9 {
   border-bottom: none;
 }
@@ -76,14 +86,8 @@
   font-size: 2rem;
   background-color: white;
   border: 1px solid black;
-  padding: .2em .5em;
+  padding: 0.2em 0.5em;
   cursor: pointer;
-}
-
-.winning-message button:hover {
-  background-color: black;
-  border-color: white;
-  color: white;
 }
 
 .winning-message.show {
@@ -110,7 +114,7 @@
 .title {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 3rem;
-  color: aqua;
+  color: rgb(205, 203, 236);
   text-align: center;
 }
 
@@ -121,7 +125,7 @@
 
 .inputs input {
   padding: 20px;
-  color:  rgb(6, 33, 51);
+  color: rgb(6, 33, 51);
   border-radius: 5px;
   font-size: 1rem;
   margin: 20px;
@@ -147,11 +151,12 @@
   color: #fff;
 }
 
-
 .d-none {
   display: none;
 }
 
-.error {
-  border-color: rgb(238, 18, 29) !important;
+.winning-message button:hover {
+  background-color: black;
+  border-color: white;
+  color: white;
 }
