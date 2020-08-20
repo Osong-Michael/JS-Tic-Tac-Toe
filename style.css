@@ -1,0 +1,162 @@
+.game-board {
+  max-width: 310px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  align-items: center;
+  margin: 60px auto;
+}
+
+.board-cell {
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+}
+
+.text-center {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 40px;
+  color: red;
+}
+
+.text-center span {
+  color: #3367b5;
+}
+
+.input-text {
+  font-size: 20px;
+  color: rgb(46, 220, 243);
+}
+
+.board-cell1,
+.board-cell4,
+.board-cell7 {
+  border-left: none;
+}
+
+.board-cell3,
+.board-cell6,
+.board-cell9 {
+  border-right: none;
+}
+
+.board-cell1,
+.board-cell2,
+.board-cell3 {
+  border-top: none;
+}
+
+.board-cell7,
+.board-cell8,
+.board-cell9 {
+  border-bottom: none;
+}
+
+.playX {
+  background-image: url('images/AX.png');
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.playO {
+  background-image: url('images/O.png');
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.winning-message {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 5rem;
+  flex-direction: column;
+}
+
+.winning-message button {
+  font-size: 2rem;
+  background-color: white;
+  border: 1px solid black;
+  padding: 0.2em 0.5em;
+  cursor: pointer;
+}
+
+.winning-message.show {
+  display: flex;
+}
+
+.start-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 1rem;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  color: rgb(205, 203, 236);
+  text-align: center;
+}
+
+.inputs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.inputs input {
+  padding: 20px;
+  color: rgb(6, 33, 51);
+  border-radius: 5px;
+  font-size: 1rem;
+  margin: 20px;
+  border: 2px solid transparent;
+  outline-style: none;
+  flex: 1;
+}
+
+.inputs-btn button {
+  font-size: 1.5rem;
+  background-color: white;
+  border: 1px solid #000;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  display: block;
+  border-radius: 5px;
+  margin-top: 2rem;
+}
+
+.inputs-btn button:hover {
+  border: 1px solid #fff;
+  background-color: #000;
+  color: #fff;
+}
+
+.d-none {
+  display: none;
+}
+
+.winning-message button:hover {
+  background-color: black;
+  border-color: white;
+  color: white;
+}
