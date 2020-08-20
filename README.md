@@ -2,7 +2,6 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-<!-- [![MIT License][license-shield]][license-url] -->
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
@@ -11,7 +10,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/OA7/JS-Tic-Tac-Toe">
-    <img src="images/ttt.png" alt="Logo" width="80" height="80">
+    <img src="images/ttt.png" alt="Logo" width="100" height="100">
   </a>
 
   <h3 align="center">Tic Tac Toe</h3>
@@ -22,7 +21,7 @@
     <a href="https://github.com/OA7/JS-Tic-Tac-Toe"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="">View Demo</a>
+    <a href="https://raw.githack.com/OA7/JS-Tic-Tac-Toe/game/index.html">View Demo</a>
     ·
     <a href="https://github.com/OA7/JS-Tic-Tac-Toe/issues">Report Bug</a>
     ·
@@ -119,9 +118,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 👤 **Osong Agberndifor**
 
-- Github: [@githubhandle](https://github.com/OA7)
-- Twitter: [@twitterhandle](https://twitter.com/Osong17)
-- Linkedin: [linkedin](https://linkedin.com/osong-agberndifor)
+- Github: [OA7](https://github.com/OA7)
+- Twitter: [@Osong17](https://twitter.com/Osong17)
+- Linkedin: [Osong](https://linkedin.com/osong-agberndifor)
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Show your support
@@ -141,8 +140,6 @@ Give a ⭐️ if you like this project!
 [stars-url]: https://github.com/OA7/JS-Tic-Tac-Toe/stargazers
 [issues-shield]: https://img.shields.io/github/issues/OA7/JS-Tic-Tac-Toe.svg?style=flat-square
 [issues-url]: https://github.com/OA7/JS-Tic-Tac-Toe/issues
-<!-- [license-shield]: https://img.shields.io/github/license/OA7/JS-book-library.svg?style=flat-square
-[license-url]: https://github.com/OA7/JS-book-library/blob/master/LICENSE.txt -->
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/osong-agberndifor
 [product-screenshot]: images/screen.png
