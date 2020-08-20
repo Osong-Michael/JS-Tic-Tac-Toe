@@ -54,6 +54,7 @@
 ## ScreenShot of App
 [![Product Name Screen Shot][product-screenshot]]()
 
+This is a simple game where two players can play against each other and try to out-smart each other by placing their symbols in empty square spaces and hopefully have 3 in a row diagonally, vertically or horizontally without their opponent figuring out their moves. 
 
 ### Built With
 
@@ -107,11 +108,6 @@ Contributions are what make the open source community such an amazing place to b
 
 
 <!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-
 
 <!-- CONTACT -->
 ## Authors
