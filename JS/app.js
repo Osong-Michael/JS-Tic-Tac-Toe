@@ -6,8 +6,9 @@ import {
   PLAY_X,
   PLAY_O,
 } from './board.js';
-import { playerOne, playerTwo } from './players.js';
+// import { playerOne, playerTwo } from './players.js';
 import { checkPlayersNames, winningText, winningTextElt } from './game_play.js';
+import { getPlayerNames, playerOne, playerTwo } from './DOM.js';
 
 
 const restartButton = document.getElementById('restartButton');
@@ -16,13 +17,12 @@ const startButton = document.getElementById('startBtn');
 const exitButton = document.getElementById('exitBtn');
 
 // eslint-disable-next-line no-use-before-define
-startGame();
 
 function startGame() {
-  if (checkPlayersNames()) {
-    startPage.classList.add('d-none');
-    renderBoard();
-  }
+  const playersArray = getPlayerNames();
+  checkPlayersNames(playersArray);
+  startPage.classList.add('d-none');
+  renderBoard();
 }
 
 function restart() {
