@@ -54,14 +54,14 @@
 }
 
 .playX {
-  background-image: url('images/AX.png');
+  background-image: url('./images/AX.png');
   background-size: 70px;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .playO {
-  background-image: url('images/O.png');
+  background-image: url('./images/O.png');
   background-size: 70px;
   background-repeat: no-repeat;
   background-position: center;
