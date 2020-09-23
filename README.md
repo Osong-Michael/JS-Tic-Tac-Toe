@@ -21,7 +21,7 @@
     <a href="https://github.com/OA7/JS-Tic-Tac-Toe"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://raw.githack.com/OA7/JS-Tic-Tac-Toe/game/index.html">View Demo</a>
+    <a href="https://oa7.github.io/JS-Tic-Tac-Toe/">View Demo</a>
     ·
     <a href="https://github.com/OA7/JS-Tic-Tac-Toe/issues">Report Bug</a>
     ·
