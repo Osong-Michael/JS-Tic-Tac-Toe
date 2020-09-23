@@ -2,12 +2,13 @@
 /* eslint-disable import/extensions */
 // eslint-disable-next-line import/no-cycle
 import { tick, PLAY_X, PLAY_O } from './board.js';
-import { setPlayerNames as playersNames, playerOne, playerTwo } from './players.js';
+import { setPlayerNames as playersNames, nameOfPlayers } from './players.js';
+import { renderEndGame } from './DOM.js';
 
 // eslint-disable-next-line import/no-mutable-exports
-export let playerTurn = false;
-export const winningText = document.querySelector('[data-winning-message-text]');
-export const winningTextElt = document.getElementById('winningMessage');
+let playerTurn = false;
+const winningText = document.querySelector('[data-winning-message-text]');
+const winningTextElt = document.getElementById('winningMessage');
 
 const WINNING_COMBO = [
   [0, 1, 2],
@@ -21,7 +22,7 @@ const WINNING_COMBO = [
 ];
 
 
-export function changePlayer() {
+function changePlayer() {
   playerTurn = !playerTurn;
 }
 
@@ -40,37 +41,33 @@ function isDraw() {
   });
 }
 
-export function checkPlayersNames() {
-  const names = playersNames();
-  if ((names[0] === '') && (names[1] === '')) {
-    playerOne.value = 'Guest One';
-    playerTwo.value = 'Guest Two';
-    return false;
-  } else if (names[0] === '') {
-    playerOne.value = 'Guest One';
-  } else if (names[1] === '') {
-    playerTwo.value = 'Guest Two';
-    return false;
-  }
-  return true;
+function checkPlayersNames(playersArray) {
+  const names = playersNames(playersArray);
+  return names;
 }
 
-function endGame(draw) {
-  const names = playersNames();
-  if (draw) {
-    winningText.innerHTML = 'It is a Draw!!';
-  } else {
-    winningText.innerHTML = `${playerTurn ? names[1] : names[0]} Wins!!`;
+function endGame(draw, names, playerTurn) {
+  let message = 'It is a Draw!!';
+  if (!draw) {
+    message = `${playerTurn ? names[1] : names[0]} Wins!!`;
   }
-  winningTextElt.classList.add('show');
+  return message;
 }
 
-export function checkWinner(currentClass) {
+function checkWinner(currentClass) {
+  let gameResult;
   if (playerWon(currentClass)) {
-    endGame(false);
+    gameResult = endGame(false, nameOfPlayers, playerTurn);
+    renderEndGame(gameResult);
   } else if (isDraw()) {
-    endGame(true);
+    gameResult = endGame(true, nameOfPlayers, playerTurn);
+    renderEndGame(gameResult);
   } else {
     changePlayer();
   }
+  return gameResult;
 }
+
+export {
+  endGame, checkWinner, checkPlayersNames, changePlayer, playerTurn, winningText, winningTextElt,
+};

@@ -10,7 +10,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/OA7/JS-Tic-Tac-Toe">
-    <img src="images/ttt.png" alt="Logo" width="100" height="100">
+    <img src="./assets/images/ttt.png" alt="Logo" width="100" height="100">
   </a>
 
   <h3 align="center">Tic Tac Toe</h3>
@@ -61,6 +61,7 @@ This is a simple game where two players can play against each other and try to o
 * [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 * [HTML](https://en.wikipedia.org/wiki/HTML)
 * [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+* [Jest](https://jestjs.io/docs/en/getting-started)
 
 
 
@@ -86,6 +87,9 @@ git clone https://github.com/OA7/JS-Tic-Tac-Toe.git
 
 cd into the project directory, open the project with your favourite text editor. Then run it with a live server.
 
+## Tests
+
+- Run `npm run test` in the terminal to see all test cases that the project passes.
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -138,4 +142,4 @@ Give a ⭐️ if you like this project!
 [issues-url]: https://github.com/OA7/JS-Tic-Tac-Toe/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/osong-agberndifor
-[product-screenshot]: images/screen.png
+[product-screenshot]: ./assets/images/screen.png
